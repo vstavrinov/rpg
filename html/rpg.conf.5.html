@@ -1,0 +1,194 @@
+<!-- Creator     : groff version 1.21 -->
+<!-- CreationDate: Fri Apr  6 16:45:55 2012 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>rpg.conf</title>
+
+</head>
+<body>
+
+<h1 align="center">rpg.conf</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#VARIABLES">VARIABLES</a><br>
+<a href="#FILES">FILES</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AUTHORS">AUTHORS</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>rpg.conf</b>
+- Configuration file for rpg</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">rpg.conf is
+configuration file for rpg utility for readable password
+generation. If it doesn&rsquo;t exists, then all parameters
+are set to it&rsquo;s defaults. In fact, it is shell script
+setting environment variables, described bellow. All
+variables are set to it&rsquo;s default values here.</p>
+
+<h2>VARIABLES
+<a name="VARIABLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">These shell
+variables are sourced by rpg script. You can redefine all of
+them in the file /etc/rpg/rpg.local and ~/.config/rpg/rpgrc
+<b><br>
+CONSONANT=&quot;bdfkmnprstvz&quot;</b></p>
+
+<p style="margin-left:22%;">Consonant letters to pick
+from.</p>
+
+
+<p style="margin-left:11%;"><b>VOWEL=&quot;euai&quot;</b></p>
+
+<p style="margin-left:22%;">Vowel letters to pick from.</p>
+
+
+<p style="margin-left:11%;"><b>DIGIT=&quot;23456789&quot;</b></p>
+
+<p style="margin-left:22%;">Digits to pick from.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>MIN=6</b></p></td>
+<td width="2%"></td>
+<td width="36%">
+
+
+<p>Minimum length, symbols.</p></td>
+<td width="42%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>MAX=12</b></p></td>
+<td width="2%"></td>
+<td width="36%">
+
+
+<p>Maximum length, symbols.</p></td>
+<td width="42%">
+</td></tr>
+</table>
+
+
+<p style="margin-left:11%;"><b>WORDS=&quot;/usr/share/dict/words&quot;</b></p>
+
+<p style="margin-left:22%;">Dictionary to check against
+to.</p>
+
+<p style="margin-left:11%;"><b>REPEAT=5</b></p>
+
+<p style="margin-left:22%;">Repeat, times</p>
+
+<p style="margin-left:11%;"><b>BAD=&quot;pb bp dt vf zs sz
+pf&quot;</b></p>
+
+<p style="margin-left:22%;">Excluded letter
+combination.</p>
+
+<p style="margin-left:11%;"><b>NUMBER=true</b></p>
+
+<p style="margin-left:22%;">Include numbers.</p>
+
+<p style="margin-left:11%;"><b>UPPER=true</b></p>
+
+<p style="margin-left:22%;">Include upper case letters.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>SPOT=2</b></p></td>
+<td width="2%"></td>
+<td width="66%">
+
+
+<p>Increase chances for upper case and digits.</p></td>
+<td width="12%">
+</td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>VERBOSE=false</b></p>
+
+<p style="margin-left:22%;">Output variables values.</p>
+
+<h2>FILES
+<a name="FILES"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>/etc/rpg/rpg.conf</b></p>
+
+<p style="margin-left:22%;">Main configuration file for
+system wide setting shell variables. Some of them override
+by command line options. In turn it sources the file
+/etc/rpg/rpg.local, where You can redefine all of them,
+leaving main config untouched.</p>
+
+<p style="margin-left:11%;"><b>/etc/rpg/rpg.local</b></p>
+
+<p style="margin-left:22%;">Custom configuration file. Use
+it for local setting, overriding ones from main config.</p>
+
+<p style="margin-left:11%;"><b>~/.config/rpg/rpgrc</b></p>
+
+<p style="margin-left:22%;">User config, override system
+settings.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>rpg</b>(1),
+<b>bash</b>(1)</p>
+
+<h2>AUTHORS
+<a name="AUTHORS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Vladimir
+Stavrinov &lt;vstavrinov@gmail.com&gt;</p>
+<hr>
+</body>
+</html>

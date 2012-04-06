@@ -1,0 +1,37 @@
+NAME
+rpg - Readable Password Generator
+
+SYNOPSIS
+rpg [ -m MIN ] [ -x MAX ] [ -r REPEAT ] [ -nuvdh ]
+
+DESCRIPTION
+This shell script generate passwords easy to read and remember. This is achieved by some restrictions. Some letters, digits, and letter combinations are excluded. No consecutive vowel. No more then 2 consecutive consonant. No consecutive consonant before and after digit. Main stream is lower case letters. Chance to include digit and upper case letters may be adjusted. In addition, if the dictionary exists, it will be consulted for longest non-digit chunk. All letter combinations for exclusion may be changed in configuration file.
+
+OPTIONS
+	-m MIN  Minimum length MIN characters [6].
+
+	-x MAX  Maximum length MAX characters [12].
+
+	-r REPEAT  Repeat REPEAT times [5].
+	-n  No digits.
+	-u  No upper case.
+	-v  Verbose mode. Output variables values.
+	-d  Debug mode. Set the shell options: -x -v.
+	-V  Version and copyright.
+	-h  Help.
+
+FILES
+/etc/rpg/rpg.conf  
+Main configuration file for system wide setting shell variables. Some of them override by command line options. In turn it sources the file /etc/rpg/rpg.local, where You can redefine all of them, leaving main config untouched.
+
+/etc/rpg/rpg.local  
+Custom configuration file. Use it for local setting, overriding ones from main config.
+
+~/.config/rpg/rpgrc  
+User config, override system settings.
+
+SEE ALSO
+rpg.conf(5)
+
+AUTHORS
+Vladimir Stavrinov <vstavrinov@gmail.com>

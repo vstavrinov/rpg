@@ -1,0 +1,232 @@
+<!-- Creator     : groff version 1.21 -->
+<!-- CreationDate: Fri Apr  6 16:45:54 2012 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>rpg</title>
+
+</head>
+<body>
+
+<h1 align="center">rpg</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#FILES">FILES</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AUTHORS">AUTHORS</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>rpg</b> -
+Readable Password Generator</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>rpg</b> [
+<b>-m</b> <i>MIN</i> ] [ <b>-x</b> <i>MAX</i> ] [ <b>-r</b>
+<i>REPEAT</i> ] [ <b>-nuvdh</b> ]</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">This shell
+script generate passwords easy to read and remember. This is
+achieved by some restrictions. Some letters, digits, and
+letter combinations are excluded. No consecutive vowel. No
+more then 2 consecutive consonant. No consecutive consonant
+before and after digit. Main stream is lower case letters.
+Chance to include digit and upper case letters may be
+adjusted. In addition, if the dictionary exists, it will be
+consulted for longest non-digit chunk. All letter
+combinations for exclusion may be changed in configuration
+file.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p style="margin-top: 1em"><b>-m</b> <i>MIN</i></p></td>
+<td width="2%"></td>
+<td width="53%">
+
+
+<p style="margin-top: 1em">Minimum length <i>MIN</i>
+characters [6].</p></td>
+<td width="25%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="9%">
+
+
+<p><b>-x</b> <i>MAX</i></p></td>
+<td width="2%"></td>
+<td width="53%">
+
+
+<p>Maximum length <i>MAX</i> characters [12].</p></td>
+<td width="25%">
+</td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>-r</b> <i>REPEAT</i></p>
+
+<p style="margin-left:22%;">Repeat <i>REPEAT</i> times
+[5].</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>-n</b></p></td>
+<td width="8%"></td>
+<td width="63%">
+
+
+<p>No digits.</p></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>-u</b></p></td>
+<td width="8%"></td>
+<td width="63%">
+
+
+<p>No upper case.</p></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>-v</b></p></td>
+<td width="8%"></td>
+<td width="63%">
+
+
+<p>Verbose mode. Output variables values.</p></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>-d</b></p></td>
+<td width="8%"></td>
+<td width="63%">
+
+
+<p>Debug mode. Set the shell options: <b>-x -v</b>.</p></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>-V</b></p></td>
+<td width="8%"></td>
+<td width="63%">
+
+
+<p>Version and copyright.</p></td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>-h</b></p></td>
+<td width="8%"></td>
+<td width="63%">
+
+
+<p>Help.</p></td>
+<td width="15%">
+</td></tr>
+</table>
+
+<h2>FILES
+<a name="FILES"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>/etc/rpg/rpg.conf</b></p>
+
+<p style="margin-left:22%;">Main configuration file for
+system wide setting shell variables. Some of them override
+by command line options. In turn it sources the file
+/etc/<b>rpg</b>/rpg.local, where You can redefine all of
+them, leaving main config untouched.</p>
+
+<p style="margin-left:11%;"><b>/etc/rpg/rpg.local</b></p>
+
+<p style="margin-left:22%;">Custom configuration file. Use
+it for local setting, overriding ones from main config.</p>
+
+<p style="margin-left:11%;"><b>~/.config/rpg/rpgrc</b></p>
+
+<p style="margin-left:22%;">User config, override system
+settings.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>rpg.conf</b>(5)</p>
+
+<h2>AUTHORS
+<a name="AUTHORS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Vladimir
+Stavrinov &lt;vstavrinov@gmail.com&gt;</p>
+<hr>
+</body>
+</html>

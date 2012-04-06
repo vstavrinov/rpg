@@ -1,0 +1,37 @@
+NAME
+rpg.conf - Configuration file for rpg
+
+DESCRIPTION
+rpg.conf is configuration file for rpg utility for readable password generation. If it doesn't exists, then all parameters are set to it's defaults. In fact, it is shell script setting environment variables, described bellow. All variables are set to it's default values here.
+
+VARIABLES
+These shell variables are sourced by rpg script. You can redefine all of them in the file /etc/rpg/rpg.local and ~/.config/rpg/rpgrc
+
+CONSONANT="bdfkmnprstvz"  Consonant letters to pick from.
+VOWEL="euai"  Vowel letters to pick from.
+DIGIT="23456789"  Digits to pick from.
+MIN=6  Minimum length, symbols.
+MAX=12  Maximum length, symbols.
+WORDS="/usr/share/dict/words"  Dictionary to check against to.
+REPEAT=5  Repeat, times
+BAD="pb bp dt vf zs sz pf"  Excluded letter combination.
+NUMBER=true  Include numbers.
+UPPER=true  Include upper case letters.
+SPOT=2  Increase chances for upper case and digits.
+VERBOSE=false  Output variables values.
+
+FILES
+/etc/rpg/rpg.conf  
+Main configuration file for system wide setting shell variables. Some of them override by command line options. In turn it sources the file /etc/rpg/rpg.local, where You can redefine all of them, leaving main config untouched.
+
+/etc/rpg/rpg.local  
+Custom configuration file. Use it for local setting, overriding ones from main config.
+
+~/.config/rpg/rpgrc  
+User config, override system settings.
+
+SEE ALSO
+rpg(1), bash(1)
+
+AUTHORS
+Vladimir Stavrinov <vstavrinov@gmail.com>
