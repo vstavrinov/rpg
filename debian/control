@@ -1,0 +1,20 @@
+Source: rpg
+Section: admin
+Priority: optional
+Maintainer: Vladimir Stavrinov <vstavrinov@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://sourceforge.net/projects/rpg/
+#Vcs-Git: git://git.debian.org/collab-maint/rpg.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/rpg.git;a=summary
+
+Package: rpg
+Architecture: all
+Depends: ${misc:Depends}
+Description: Readable Password Generator
+ This shell script generate passwords easy to read and remember, but still
+ strong enough. This is achieved by some restrictions. Some letters, digits,
+ and letter combinations are excluded. No consecutive vowel. No more then 2
+ consecutive consonant. No consecutive consonant before and after digit.  Main
+ stream is lower case letters. Chance to include digit and upper case letters
+ may be adjusted.
