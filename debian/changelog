@@ -1,3 +1,10 @@
+rpg (1.0.4-1) unstable; urgency=low
+
+  * Security fix: replace tr with shell pattern substitution preventing
+    password exposing.
+
+ -- Vladimir Stavrinov <vstavrinov@gmail.com>  Wed, 11 Apr 2012 13:18:03 +0400
+
 rpg (1.0.3-1) unstable; urgency=low
 
   * Once more point where passwords are showing fixed.
