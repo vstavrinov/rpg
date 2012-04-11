@@ -3,7 +3,7 @@
 # Readable Password Generator
 # (C) Vladimir Stavrinov <vstavrinov@gmail.com>, GPL
 
-VERSION=1.0.4
+VERSION=1.0.3
 
 [ -r /etc/rpg/rpg.conf ] && . /etc/rpg/rpg.conf
 [ -r /etc/rpg/rpg.local ] && . /etc/rpg/rpg.local
@@ -119,8 +119,7 @@ pick_up()
 	LAST=$(echo -n $HEAP | cut -c $INDEX)
     done
     # Remove choosen symbol from its type set.
-    #eval $HANDLE=$(echo -n $HEAP | tr -d $LAST)
-    eval $HANDLE=${HEAP/$LAST/}
+    eval $HANDLE=$(echo -n $HEAP | tr -d $LAST)
 }
 
 generate_password ()
