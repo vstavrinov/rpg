@@ -1,3 +1,14 @@
+rpg (1.0.4-2) unstable; urgency=medium
+
+  * Security fix: replace tr with shell pattern substitution preventing password exposing.
+  * Revert "Security fix: replace tr with shell pattern substitution preventing password exposing."
+  * Security fix: replace tr with shell pattern substitution preventing password exposing.
+  * 
+  * 
+  * Migrate to github.
+
+ -- Vladimir Stavrinov <vstavrinov@gmail.com>  Mon, 21 Mar 2016 19:05:55 +0300
+
 rpg (1.0.4-1) unstable; urgency=low
 
   * Security fix: replace tr with shell pattern substitution preventing
